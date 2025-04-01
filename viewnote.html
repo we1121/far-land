@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,12 @@
   <link rel="stylesheet" href="css/viewnote.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <div class="header view-note-header">
     <nav>
       <a href="index.html">
-        <img src="logo-red.png" class="logo">
+        <img src="/images/logo-red.png" class="logo">
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Back to index</a></li>
@@ -27,7 +29,7 @@
 
   <div class="container">
     <h2 class="sub-title">Recently Published</h2>
-    
+
     <!-- 更灵活的笔记容器，使用data属性为将来的后端集成做准备 -->
     <div class="notes-container" id="notes-container" data-source="recent">
       <!-- 每个笔记项都是一个独立的卡片 -->
@@ -38,7 +40,8 @@
             <span><i class="fas fa-user"></i> John Traveler</span>
             <span><i class="fas fa-calendar"></i> June 15, 2023</span>
           </div>
-          <p>Exploring the hidden gems of Europe doesn't have to break the bank. Discover how to make the most of your budget while experiencing the rich culture and stunning landscapes...</p>
+          <p>Exploring the hidden gems of Europe doesn't have to break the bank. Discover how to make the most of your
+            budget while experiencing the rich culture and stunning landscapes...</p>
           <div class="note-tags">
             <span>Europe</span>
             <span>Budget Travel</span>
@@ -47,7 +50,7 @@
           <a href="note-detail.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      
+
       <div class="note-card" data-note-id="2">
         <div class="note-card-content">
           <h3>Traveled more than 100 Countries in less than a year</h3>
@@ -55,7 +58,8 @@
             <span><i class="fas fa-user"></i> Sarah Explorer</span>
             <span><i class="fas fa-calendar"></i> May 22, 2023</span>
           </div>
-          <p>An incredible journey across continents, experiencing diverse cultures, cuisines, and landscapes. Learn about the planning, challenges, and unforgettable moments from this whirlwind adventure...</p>
+          <p>An incredible journey across continents, experiencing diverse cultures, cuisines, and landscapes. Learn
+            about the planning, challenges, and unforgettable moments from this whirlwind adventure...</p>
           <div class="note-tags">
             <span>World Tour</span>
             <span>Adventure</span>
@@ -64,7 +68,7 @@
           <a href="note-detail.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      
+
       <div class="note-card" data-note-id="3">
         <div class="note-card-content">
           <h3>Best experience you get while traveling to Thailand</h3>
@@ -72,7 +76,8 @@
             <span><i class="fas fa-user"></i> Mike Wanderer</span>
             <span><i class="fas fa-calendar"></i> April 10, 2023</span>
           </div>
-          <p>From the bustling streets of Bangkok to the serene beaches of Phuket, Thailand offers a perfect blend of tradition and modernity. Discover the must-visit locations and authentic experiences...</p>
+          <p>From the bustling streets of Bangkok to the serene beaches of Phuket, Thailand offers a perfect blend of
+            tradition and modernity. Discover the must-visit locations and authentic experiences...</p>
           <div class="note-tags">
             <span>Thailand</span>
             <span>Asia</span>
@@ -82,7 +87,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- 分页控件，为将来的后端分页做准备 -->
     <div class="pagination">
       <button class="pagination-btn active">1</button>
@@ -90,7 +95,7 @@
       <button class="pagination-btn">3</button>
       <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
     </div>
-    
+
     <!-- 添加一个创建新笔记的按钮 -->
     <div class="create-note-container">
       <a href="post.html" class="create-note-btn">
@@ -98,7 +103,7 @@
       </a>
     </div>
   </div>
-  
+
   <div class="footer">
     <a href="https://space.bilibili.com/85318515"><i class="fa-brands fa-bilibili"></i></a>
     <a href="https://github.com/Far-Land"><i class="fa-brands fa-github"></i></a>
@@ -106,9 +111,9 @@
     <hr>
     <p>© 2025 Far Land. All Rights Reserved.</p>
   </div>
-  
+
   <!-- 引入笔记相关的JavaScript -->
   <script src="js/notes.js"></script>
 </body>
-</html>
 
+</html>
