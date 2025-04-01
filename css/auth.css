@@ -1,0 +1,112 @@
+/* Login and Register Forms */
+.auth-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form,
+.register-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  background: inherit;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-top: -100px;
+}
+
+.login-form {
+  height: 400px;
+}
+
+.register-form {
+  height: 490px;
+}
+
+.login-form::before,
+.register-form::before {
+  content: "";
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  overflow: hidden;
+  background: inherit;
+  box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.25);
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.login-form h2,
+.register-form h2 {
+  font-family: "Playfair Display", serif;
+  margin: 10px 10px 20px;
+  font-size: 32px;
+  color: #333;
+}
+
+.login-form input,
+.register-form input {
+  margin: 10px 60px;
+  height: 36px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 0 20px;
+  color: #3d5254;
+}
+
+.login-form button,
+.register-form button {
+  margin: 10px 60px;
+  height: 40px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 0 10px;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-form button {
+  height: 60px;
+}
+
+.login-form input::placeholder,
+.register-form input::placeholder {
+  color: #3d5254;
+}
+
+.login-form button:focus,
+.login-form input:focus,
+.register-form button:focus,
+.register-form input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.login-form button:hover,
+.register-form button:hover {
+  background: linear-gradient(135deg, #88d3ce, #6e45e2);
+}
+
+.login-form p,
+.register-form p {
+  color: #000;
+  margin-top: 30px;
+}
+

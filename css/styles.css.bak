@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Common header styles */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/replace-bg02.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 7%;
+}
+
+.logo {
+  width: 140px;
+  cursor: pointer;
+}
+
+.nav-links li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.register-btn {
+  background: #fff;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Container styles */
+.container {
+  padding: 0 7%;
+}
+
+/* Home page specific styles */
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4vw;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.search-bar {
+  background: #fff;
+  width: 70%;
+  margin: 30px auto 50px auto;
+  padding: 6px 10px 6px 30px;
+  border-radius: 50px;
+}
+
+.search-bar form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-bar form input {
+  display: block;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.search-bar form button {
+  background: #ff5361;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-left: 200px;
+}
+
+.search-bar form button img {
+  width: 15px;
+  margin-top: 7px;
+}
+
+.location-input {
+  flex: 1;
+}
+
+.search-bar form label {
+  font-weight: 600;
+}
+
+/* Announcements */
+.announcements {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.announcements p {
+  font-size: 16px;
+  color: #333;
+}
+
+.announcements small {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Section titles */
+.sub-title {
+  margin: 50px 0 20px;
+  font-size: 2.2vw;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Exclusives grid */
+.exclusives {
+  font-family: "Playfair Display", serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.exclusives img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.exclusives div {
+  position: relative;
+}
+
+.exclusives div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+/* Trending Places */
+.trending {
+  font-family: "Playfair Display", serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.trending div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trending h3 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Travel stories */
+.travel-stories {
+  margin: 80px 0;
+  background-image: linear-gradient(to right, #3f2321, transparent), url("images/banner-2.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 5%;
+  color: #fff;
+}
+
+.travel-stories h2 {
+  margin: 50px 0 20px;
+  font-size: 2.2vw;
+  font-weight: 500;
+  color: #fff;
+}
+
+.travel-stories h3 {
+  font-size: 4vw;
+  line-height: 5.3vw;
+  font-weight: 500;
+}
+
+.travel-stories p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.travel-stories-btn {
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Example stories */
+.example {
+  font-family: "Playfair Display", serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.example div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.example div {
+  position: relative;
+  text-align: center;
+}
+
+.example p {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 26px;
+}
+
+.example-btn {
+  text-decoration: none;
+  background: red;
+  color: #fff;
+  width: 80%;
+  max-width: 350px;
+  display: block;
+  text-align: center;
+  margin: 5% auto;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+/* About us */
+.about-msg {
+  text-align: center;
+  margin: 80px 0;
+  color: #333;
+  font-size: 17px;
+}
+
+.about-msg h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.about-msg p {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+  margin: 80px 0 10px;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #999;
+  font-size: 22px;
+  margin: 0 10px;
+}
+
+.footer p {
+  font-size: 17px;
+  color: #333;
+}
+
+.footer hr {
+  background: #999;
+  height: 1px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Login and Register Forms */
+.auth-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form,
+.register-form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  background: inherit;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-top: -100px;
+}
+
+.login-form {
+  height: 400px;
+}
+
+.register-form {
+  height: 490px;
+}
+
+.login-form::before,
+.register-form::before {
+  content: "";
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  overflow: hidden;
+  background: inherit;
+  box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.25);
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.login-form h2,
+.register-form h2 {
+  font-family: "Playfair Display", serif;
+  margin: 10px 10px 20px;
+  font-size: 32px;
+  color: #333;
+}
+
+.login-form input,
+.register-form input {
+  margin: 10px 60px;
+  height: 36px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 0 20px;
+  color: #3d5254;
+}
+
+.login-form button,
+.register-form button {
+  margin: 10px 60px;
+  height: 40px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 0 10px;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-form button {
+  height: 60px;
+}
+
+.login-form input::placeholder,
+.register-form input::placeholder {
+  color: #3d5254;
+}
+
+.login-form button:focus,
+.login-form input:focus,
+.register-form button:focus,
+.register-form input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.login-form button:hover,
+.register-form button:hover {
+  background: linear-gradient(135deg, #88d3ce, #6e45e2);
+}
+
+.login-form p,
+.register-form p {
+  color: #000;
+  margin-top: 30px;
+}
+
+/* View Note Page */
+.view-note-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4vw;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.view-note-header p {
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+  padding-top: 10%;
+  margin-top: -4%;
+}
+
+.note-container {
+  padding: 0 5%;
+  min-height: 100vh;
+  background: rgba(19, 15, 15, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2px;
+}
+
+.note-container h2 {
+  margin: 50px 0 20px;
+  font-size: 2.2vw;
+  font-weight: 500;
+  color: #333;
+}
+
+.shownote {
+  margin: 0 20px;
+  padding: 20px;
+  align-items: center;
+  background: rgba(19, 15, 15, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.note-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+}
+
+.note-item h3 {
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff5361;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Note Detail Page */
+.note-detail {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.note-meta {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.note-meta span {
+  margin-right: 20px;
+}
+
+.note-image {
+  margin-bottom: 30px;
+}
+
+.note-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.note-content {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.note-content h3 {
+  margin: 30px 0 15px;
+  font-family: "Playfair Display", serif;
+}
+
+.note-content p {
+  margin-bottom: 20px;
+}
+
+.note-share {
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.note-share h4 {
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 20px;
+}
+
+.social-icons a:nth-child(1) {
+  color: #3b5998;
+}
+
+.social-icons a:nth-child(2) {
+  color: #1da1f2;
+}
+
+.social-icons a:nth-child(3) {
+  color: #0077b5;
+}
+
+.social-icons a:nth-child(4) {
+  color: #25d366;
+}
+
+/* Post Form */
+.post-form-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-form-container h2 {
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.publish-btn {
+  background: linear-gradient(135deg, #88d3ce, #6e45e2);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .search-bar {
+    width: 90%;
+    padding: 5px;
+  }
+
+  .search-bar form button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .location-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .example p {
+    font-size: 18px;
+  }
+
+  .login-form,
+  .register-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-form input,
+  .register-form input,
+  .login-form button,
+  .register-form button {
+    margin: 10px 20px;
+  }
+}
+

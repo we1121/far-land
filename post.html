@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Post - Far Land</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/post.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="header post-header">
+    <nav>
+      <a href="index.html">
+        <img src="logo-red.png" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="viewnote.html">View Notes</a></li>
+      </ul>
+      <a href="login.html" class="register-btn">Register Now</a>
+    </nav>
+    <div class="title-container">
+      <h1>Share Your Travel Story</h1>
+      <p>Let others experience the world through your eyes</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="post-form-container">
+      <div class="form-header">
+        <div class="form-icon">
+          <i class="fas fa-pen-fancy"></i>
+        </div>
+        <h2>Create New Post</h2>
+        <p>Fill in the details below to share your amazing travel experience with the community</p>
+      </div>
+      
+      <form action="viewnote.html" class="post-form">
+        <div class="form-group">
+          <label for="title">
+            <i class="fas fa-heading"></i> Title
+          </label>
+          <input 
+            type="text" 
+            id="title" 
+            placeholder="Give your story a captivating title" 
+            required
+          >
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="location">
+              <i class="fas fa-map-marker-alt"></i> Location
+            </label>
+            <input 
+              type="text" 
+              id="location" 
+              placeholder="Where did you travel to?"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="travel-date">
+              <i class="fas fa-calendar-alt"></i> Travel Date
+            </label>
+            <input 
+              type="date" 
+              id="travel-date"
+            >
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="content">
+            <i class="fas fa-align-left"></i> Your Story
+          </label>
+          <textarea 
+            id="content" 
+            rows="12" 
+            placeholder="Share your experience, tips, and memorable moments..." 
+            required
+          ></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="tags">
+            <i class="fas fa-tags"></i> Tags
+          </label>
+          <input 
+            type="text" 
+            id="tags" 
+            placeholder="Add tags separated by commas (e.g., Europe, Budget Travel, Adventure)"
+          >
+        </div>
+        
+        <div class="form-group upload-group">
+          <label for="images">
+            <i class="fas fa-images"></i> Upload Images
+          </label>
+          <div class="upload-container">
+            <div class="upload-area" id="upload-area">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Drag & drop images here or click to browse</p>
+              <span>Maximum 5 images, 5MB each</span>
+              <input type="file" id="images" accept="image/*" multiple class="file-input">
+            </div>
+            <div class="image-preview" id="image-preview">
+              <!-- Preview images will be displayed here -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="secondary-btn">Save Draft</button>
+          <button type="submit" class="publish-btn">
+            <i class="fas fa-paper-plane"></i> Publish Story
+          </button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="post-tips">
+      <h3><i class="fas fa-lightbulb"></i> Tips for a Great Story</h3>
+      <ul>
+        <li>Include specific details about places you visited</li>
+        <li>Share practical tips that could help other travelers</li>
+        <li>Mention any hidden gems or off-the-beaten-path locations</li>
+        <li>Add high-quality photos to bring your story to life</li>
+        <li>Be honest about both positive and challenging experiences</li>
+      </ul>
+    </div>
+    
+    <div class="footer">
+      <a href="https://space.bilibili.com/85318515"><i class="fa-brands fa-bilibili"></i></a>
+      <a href="https://github.com/Far-Land"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      <hr>
+      <p>© 2025 Far Land. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <!-- 添加JavaScript以增强表单交互 -->
+  <script src="js/post.js"></script>
+</body>
+</html>
+

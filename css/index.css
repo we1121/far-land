@@ -1,0 +1,252 @@
+/* Home page specific styles */
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4vw;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.search-bar {
+  background: #fff;
+  width: 70%;
+  margin: 30px auto 50px auto;
+  padding: 6px 10px 6px 30px;
+  border-radius: 50px;
+}
+
+.search-bar form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-bar form input {
+  display: block;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.search-bar form button {
+  background: #ff5361;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-left: 200px;
+}
+
+.search-bar form button img {
+  width: 15px;
+  margin-top: 7px;
+}
+
+.location-input {
+  flex: 1;
+}
+
+.search-bar form label {
+  font-weight: 600;
+}
+
+/* Announcements */
+.announcements {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.announcements p {
+  font-size: 16px;
+  color: #333;
+}
+
+.announcements small {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Exclusives grid */
+.exclusives {
+  font-family: "Playfair Display", serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.exclusives img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.exclusives div {
+  position: relative;
+}
+
+.exclusives div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+/* Trending Places */
+.trending {
+  font-family: "Playfair Display", serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  margin-bottom: 40px;
+}
+
+.trending-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trending-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trending-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.trending-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trending-item:hover .trending-img img {
+  transform: scale(1.05);
+}
+
+.trending h3 {
+  font-weight: 600;
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #333;
+}
+
+/* Travel stories */
+.travel-stories {
+  margin: 80px 0;
+  background-image: linear-gradient(to right, #3f2321, transparent), url("/images/banner-2.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 5%;
+  color: #fff;
+}
+
+.travel-stories h2 {
+  margin: 50px 0 20px;
+  font-size: 2.2vw;
+  font-weight: 500;
+  color: #fff;
+}
+
+.travel-stories h3 {
+  font-size: 4vw;
+  line-height: 5.3vw;
+  font-weight: 500;
+}
+
+.travel-stories p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.travel-stories-btn {
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Example stories */
+.example {
+  font-family: "Playfair Display", serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.example div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.example div {
+  position: relative;
+  text-align: center;
+}
+
+.example p {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 26px;
+}
+
+.example-btn {
+  text-decoration: none;
+  background: red;
+  color: #fff;
+  width: 80%;
+  max-width: 350px;
+  display: block;
+  text-align: center;
+  margin: 5% auto;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+/* About us */
+.about-msg {
+  text-align: center;
+  margin: 80px 0;
+  color: #333;
+  font-size: 17px;
+}
+
+.about-msg h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.about-msg p {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}

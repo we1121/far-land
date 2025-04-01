@@ -1,0 +1,226 @@
+/* Note Detail Page */
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/note-bg02.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.note-detail-header {
+  min-height: 60vh;
+  position: relative;
+}
+
+.note-detail-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.note-detail-header nav {
+  position: relative;
+  z-index: 2;
+}
+
+.title-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.title-container h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+.title-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.title-meta i {
+  margin-right: 8px;
+  color: #ff5361;
+}
+
+.note-detail {
+  max-width: 800px;
+  margin: -80px auto 50px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+}
+
+.note-image {
+  margin-bottom: 30px;
+}
+
+.note-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.note-content {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.note-content h3 {
+  margin: 30px 0 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.note-content p {
+  margin-bottom: 20px;
+}
+
+.note-share {
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.note-share h4 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+/* 修复社交媒体图标样式 */
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  /* 移除下划线 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  /* 确保没有边框 */
+}
+
+.social-icons a i {
+  display: flex;
+  /* 确保图标居中 */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 社交媒体图标颜色 */
+.social-icons a:nth-child(1) {
+  background: #f5f5f5;
+  color: #3b5998;
+}
+
+.social-icons a:nth-child(1):hover {
+  background: #3b5998;
+  color: white;
+}
+
+.social-icons a:nth-child(2) {
+  background: #f5f5f5;
+  color: #1da1f2;
+}
+
+.social-icons a:nth-child(2):hover {
+  background: #1da1f2;
+  color: white;
+}
+
+.social-icons a:nth-child(3) {
+  background: #f5f5f5;
+  color: #0077b5;
+}
+
+.social-icons a:nth-child(3):hover {
+  background: #0077b5;
+  color: white;
+}
+
+.social-icons a:nth-child(4) {
+  background: #f5f5f5;
+  color: #25d366;
+}
+
+.social-icons a:nth-child(4):hover {
+  background: #25d366;
+  color: white;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .title-container h1 {
+    font-size: 2rem;
+  }
+
+  .title-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .note-detail {
+    margin-top: -50px;
+    padding: 20px;
+  }
+
+  .note-content {
+    font-size: 1rem;
+  }
+
+  .note-content h3 {
+    font-size: 1.4rem;
+  }
+}

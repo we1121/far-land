@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Common header styles */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/replace bg02.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 7%;
+}
+
+.logo {
+  width: 140px;
+  cursor: pointer;
+}
+
+.nav-links li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.register-btn {
+  background: #fff;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Container styles */
+.container {
+  padding: 0 7%;
+}
+
+/* Section titles - common across pages */
+.sub-title {
+  margin: 50px 0 20px;
+  font-size: 2.2vw;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  margin: 80px 0 10px;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #999;
+  font-size: 22px;
+  margin: 0 10px;
+}
+
+.footer p {
+  font-size: 17px;
+  color: #333;
+}
+
+.footer hr {
+  background: #999;
+  height: 1px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 6vw;
+  }
+
+  .search-bar {
+    width: 90%;
+    padding: 5px;
+  }
+
+  .search-bar form button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .location-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .example p {
+    font-size: 18px;
+  }
+
+  .login-form,
+  .register-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-form input,
+  .register-form input,
+  .login-form button,
+  .register-form button {
+    margin: 10px 20px;
+  }
+}
