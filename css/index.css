@@ -1,17 +1,26 @@
-/* Home page specific styles */
-.header h1 {
+/* Index Page Specific Styles */
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.container h1 {
   font-family: "Playfair Display", serif;
   font-size: 4vw;
   font-weight: 500;
   color: #fff;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 15%;
 }
 
 .search-bar {
   background: #fff;
   width: 70%;
-  margin: 30px auto 50px auto;
+  margin: 30px auto;
   padding: 6px 10px 6px 30px;
   border-radius: 50px;
 }
@@ -20,7 +29,6 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .search-bar form input {
@@ -38,7 +46,6 @@
   border: 0;
   outline: none;
   cursor: pointer;
-  margin-left: 200px;
 }
 
 .search-bar form button img {
@@ -50,47 +57,54 @@
   flex: 1;
 }
 
-.search-bar form label {
+.location-input label {
   font-weight: 600;
 }
 
 /* Announcements */
 .announcements {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  background-color: #f8f9fa;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .announcements p {
-  font-size: 16px;
-  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
 .announcements small {
-  display: block;
-  font-size: 12px;
-  color: #999;
-  margin-top: 5px;
+  color: #666;
 }
 
-/* Exclusives grid */
+/* Exclusives */
 .exclusives {
-  font-family: "Playfair Display", serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 30px;
-}
-
-.exclusives img {
-  width: 100%;
-  border-radius: 10px;
 }
 
 .exclusives div {
   position: relative;
+}
+
+.exclusives div a {
+  display: block;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.exclusives div img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.exclusives div a:hover img {
+  transform: scale(1.05);
 }
 
 .exclusives div span {
@@ -100,100 +114,92 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
+  z-index: 1;
 }
 
-/* Trending Places */
+.exclusives div span h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Trending */
 .trending {
-  font-family: "Playfair Display", serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .trending-item {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
-.trending-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.trending-item a {
+  text-decoration: none;
+  color: #333;
+  display: block;
 }
 
 .trending-img {
-  height: 200px;
+  position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .trending-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s;
 }
 
-.trending-item:hover .trending-img img {
+.trending-item a:hover .trending-img img {
   transform: scale(1.05);
 }
 
 .trending h3 {
+  margin-top: 10px;
   font-weight: 600;
-  padding: 15px;
-  text-align: center;
-  margin: 0;
-  background: linear-gradient(to right, #f8f9fa, #e9ecef);
-  color: #333;
 }
 
-/* Travel stories */
+/* Travel Stories */
 .travel-stories {
   margin: 80px 0;
-  background-image: linear-gradient(to right, #3f2321, transparent), url("/images/banner-2.png");
+  background-image: linear-gradient(to right, #3f2321, transparent), url(/images/banner-2.png);
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-  padding: 5%;
+  padding: 50px 0;
   color: #fff;
+  text-align: center;
 }
 
 .travel-stories h2 {
-  margin: 50px 0 20px;
-  font-size: 2.2vw;
+  font-size: 2.5rem;
   font-weight: 500;
-  color: #fff;
-}
-
-.travel-stories h3 {
-  font-size: 4vw;
-  line-height: 5.3vw;
-  font-weight: 500;
-}
-
-.travel-stories p {
-  font-size: 18px;
-  margin: 10px 0;
+  margin-bottom: 30px;
 }
 
 .travel-stories-btn {
-  background-color: red;
-  color: #fff;
   text-decoration: none;
+  background: #ff5361;
+  color: #fff;
   padding: 12px 30px;
-  border-radius: 8px;
+  border-radius: 30px;
+  font-weight: 500;
   margin-top: 20px;
   display: inline-block;
 }
 
-/* Example stories */
+/* Example */
 .example {
-  font-family: "Playfair Display", serif;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 30px;
+  margin: 30px 0;
+}
+
+.example div {
+  position: relative;
 }
 
 .example div img {
@@ -201,12 +207,7 @@
   border-radius: 10px;
 }
 
-.example div {
-  position: relative;
-  text-align: center;
-}
-
-.example p {
+.example div p {
   width: 80%;
   position: absolute;
   top: 50%;
@@ -214,23 +215,19 @@
   transform: translate(-50%, -50%);
   color: #fff;
   font-size: 26px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .example-btn {
   text-decoration: none;
-  background: red;
-  color: #fff;
-  width: 80%;
-  max-width: 350px;
-  display: block;
-  text-align: center;
-  margin: 5% auto;
-  padding: 15px;
-  border-radius: 30px;
-  font-size: 20px;
+  color: #000;
+  margin-right: 30px;
+  font-weight: 600;
+  display: inline-block;
 }
 
-/* About us */
+/* About Us */
 .about-msg {
   text-align: center;
   margin: 80px 0;
@@ -242,11 +239,35 @@
   font-size: 28px;
   margin-bottom: 30px;
   font-weight: 500;
-  text-align: center;
 }
 
-.about-msg p {
-  font-size: 17px;
-  line-height: 1.5;
-  margin-bottom: 30px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 10vw;
+    padding-top: 30%;
+  }
+
+  .search-bar {
+    width: 90%;
+    padding: 5px;
+  }
+
+  .search-bar form {
+    flex-direction: column;
+  }
+
+  .search-bar form button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .location-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .example p {
+    font-size: 18px;
+  }
 }
