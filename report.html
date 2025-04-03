@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Far Land - Infrastructure Report</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/report.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="header report-header">
+    <nav>
+      <a href="index.html">
+        <img src="/images/logo-red.png" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Back to index</a></li>
+        <li><a href="infrastructure-guide.html">Back to Guide</a></li>
+      </ul>
+      <a href="login.html" class="register-btn">Register Now</a>
+    </nav>
+
+    <div class="country-intro">
+      <h1>Infrastructure Report</h1>
+      <p>Help us improve our travel guides by sharing your experiences and updates</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Report Form Section -->
+    <section class="report-form-container">
+      <div class="form-header">
+        <h2 class="section-title"><i class="fas fa-edit"></i> Submit Your Report</h2>
+        <p>Your contributions help keep our information accurate and up-to-date for fellow travelers</p>
+      </div>
+
+      <form class="report-form">
+        <div class="form-group">
+          <label for="report-type">Report Type <span class="required">*</span></label>
+          <select id="report-type" name="report-type" required>
+            <option value="" disabled selected>Select report type</option>
+            <option value="correction">Correction to Existing Information</option>
+            <option value="update">Infrastructure Update</option>
+            <option value="new-info">New Information</option>
+            <option value="safety">Safety Alert</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country <span class="required">*</span></label>
+          <select id="country" name="country" required>
+            <option value="" disabled selected>Select country</option>
+            <option value="japan">Japan</option>
+            <option value="france">France</option>
+            <option value="australia">Australia</option>
+            <option value="uk">United Kingdom</option>
+            <option value="usa">United States</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="other-country-container" style="display: none;">
+          <label for="other-country">Specify Country <span class="required">*</span></label>
+          <input type="text" id="other-country" name="other-country" placeholder="Enter country name">
+        </div>
+
+        <div class="form-group">
+          <label for="city">City/Location <span class="required">*</span></label>
+          <input type="text" id="city" name="city" placeholder="Enter city or specific location" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category <span class="required">*</span></label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select category</option>
+            <option value="transportation">Transportation</option>
+            <option value="accommodation">Accommodation</option>
+            <option value="safety">Safety & Security</option>
+            <option value="communication">Communication & Internet</option>
+            <option value="utilities">Utilities & Services</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="report-title">Report Title <span class="required">*</span></label>
+          <input type="text" id="report-title" name="report-title" placeholder="Brief title for your report" required>
+        </div>
+
+        <div class="form-group">
+          <label for="report-details">Details <span class="required">*</span></label>
+          <textarea id="report-details" name="report-details" rows="6" placeholder="Provide detailed information about your report..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="date-observed">Date Observed</label>
+          <input type="date" id="date-observed" name="date-observed">
+        </div>
+
+        <div class="form-group">
+          <label for="image-upload">Upload Images (Optional)</label>
+          <input type="file" id="image-upload" name="image-upload" accept="image/*" multiple>
+          <p class="file-hint">You can upload up to 3 images (max 5MB each)</p>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-info">Your Contact Information (Optional)</label>
+          <input type="email" id="contact-info" name="contact-info" placeholder="Email address for follow-up questions">
+        </div>
+
+        <div class="form-group verification">
+          <label>Verification <span class="required">*</span></label>
+          <div class="captcha-container">
+            <div class="captcha-box">
+              <p>I am not a robot</p>
+              <div class="checkbox-container">
+                <input type="checkbox" id="verification" name="verification" required>
+                <label for="verification" class="checkbox-label"></label>
+              </div>
+            </div>
+            <div class="captcha-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Submit Report</button>
+          <button type="reset" class="reset-btn">Reset Form</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Reporting Guidelines Section -->
+    <section class="reporting-guidelines">
+      <h2 class="section-title"><i class="fas fa-info-circle"></i> Reporting Guidelines</h2>
+      
+      <div class="guidelines-content">
+        <div class="guideline-item">
+          <div class="guideline-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="guideline-text">
+            <h3>Be Specific</h3>
+            <p>Include exact locations, dates, and detailed descriptions to help us verify and update information accurately.</p>
+          </div>
+        </div>
+        
+        <div class="guideline-item">
+          <div class="guideline-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="guideline-text">
+            <h3>Be Objective</h3>
+            <p>Focus on factual information rather than subjective opinions. This helps other travelers make informed decisions.</p>
+          </div>
+        </div>
+        
+        <div class="guideline-item">
+          <div class="guideline-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="guideline-text">
+            <h3>Include Visual Evidence</h3>
+            <p>When possible, include photos to support your report. This is especially helpful for infrastructure changes.</p>
+          </div>
+        </div>
+        
+        <div class="guideline-item">
+          <div class="guideline-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="guideline-text">
+            <h3>Respect Privacy</h3>
+            <p>Do not include personal information about other travelers or locals in your reports or images.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="https://space.bilibili.com/85318515"><i class="fa-brands fa-bilibili"></i></a>
+      <a href="https://github.com/Far-Land"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      <hr>
+      <p>© 2025 Far Land. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    // Show "Other Country" field when "Other" is selected
+    document.getElementById('country').addEventListener('change', function() {
+      const otherCountryContainer = document.getElementById('other-country-container');
+      if (this.value === 'other') {
+        otherCountryContainer.style.display = 'block';
+        document.getElementById('other-country').setAttribute('required', 'required');
+      } else {
+        otherCountryContainer.style.display = 'none';
+        document.getElementById('other-country').removeAttribute('required');
+      }
+    });
+    
+    // Form submission handling (for demonstration)
+    document.querySelector('.report-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your report! It has been submitted for review.');
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>
+
