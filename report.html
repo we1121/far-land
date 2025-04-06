@@ -22,7 +22,16 @@
         <li><a href="index.html">Back to index</a></li>
         <li><a href="infrastructure-guide.html">Back to Guide</a></li>
       </ul>
-      <a href="login.html" class="register-btn">Register Now</a>
+      <div class="user-menu">
+        <!-- 未登录状态 -->
+        <a href="login.html" class="register-btn">登录/注册</a>
+        
+        <!-- 登录后状态 (使用JavaScript根据登录状态显示) -->
+        <a href="account.html" class="user-profile-link" style="display: none;">
+          <img src="/placeholder.svg?height=40&width=40" alt="User Avatar" class="user-avatar-small">
+          <span>我的账户</span>
+        </a>
+      </div>
     </nav>
 
     <div class="country-intro">
@@ -54,20 +63,7 @@
 
         <div class="form-group">
           <label for="country">Country <span class="required">*</span></label>
-          <select id="country" name="country" required>
-            <option value="" disabled selected>Select country</option>
-            <option value="japan">Japan</option>
-            <option value="france">France</option>
-            <option value="australia">Australia</option>
-            <option value="uk">United Kingdom</option>
-            <option value="usa">United States</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group" id="other-country-container" style="display: none;">
-          <label for="other-country">Specify Country <span class="required">*</span></label>
-          <input type="text" id="other-country" name="other-country" placeholder="Enter country name">
+          <input type="text" id="country" name="country" placeholder="Enter country name" required>
         </div>
 
         <div class="form-group">
@@ -187,18 +183,6 @@
   </div>
 
   <script>
-    // Show "Other Country" field when "Other" is selected
-    document.getElementById('country').addEventListener('change', function() {
-      const otherCountryContainer = document.getElementById('other-country-container');
-      if (this.value === 'other') {
-        otherCountryContainer.style.display = 'block';
-        document.getElementById('other-country').setAttribute('required', 'required');
-      } else {
-        otherCountryContainer.style.display = 'none';
-        document.getElementById('other-country').removeAttribute('required');
-      }
-    });
-    
     // Form submission handling (for demonstration)
     document.querySelector('.report-form').addEventListener('submit', function(e) {
       e.preventDefault();

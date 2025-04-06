@@ -1,0 +1,75 @@
+erDiagram
+    User ||--o{ TravelNote : "creates"
+    User ||--o{ Report : "submits"
+    Country ||--o{ TravelNote : "referenced in"
+    Report ||--|| Case : "managed by"
+    
+    User {
+        int user_id PK
+        string username
+        string email
+        string password_hash
+        string avatar_url
+        text bio
+        string location
+        boolean is_active
+    }
+    
+    TravelNote {
+        int note_id PK
+        int user_id FK
+        string title
+        text content
+        string abstract
+        int country_id FK
+        string image_url
+        datetime published_at
+        datetime updated_at
+        enum status
+    }
+    
+    Country {
+        int country_id PK
+        string name
+        string capital
+        string language
+        string currency
+        string timezone
+        text overview
+        float safety_rating
+        text safety_details
+        text geography_climate
+        text preparation_guide
+        text arrival_guide
+        datetime last_updated
+        string status
+        string image_url
+    }
+    
+    Report {
+        int report_id PK
+        string report_type
+        string country
+        string city
+        string category
+        string report_title
+        text report_details
+        date date_observed
+        json images
+        string contact_info
+        int user_id FK
+        datetime submitted_at
+        enum status
+    }
+    
+    Case {
+        int case_id PK
+        int report_id FK
+        enum status
+        datetime created_at
+        datetime updated_at
+        datetime resolved_at
+        text admin_notes
+        text admin_response
+        text user_feedback
+    }

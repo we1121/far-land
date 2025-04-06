@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Far Land - My Account</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="header account-header">
+    <nav>
+      <a href="index.html">
+        <img src="/images/logo-red.png" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="infrastructure-guide.html">Travel Guides</a></li>
+        <li><a href="#Travel-Stories">Travel Stories</a></li>
+      </ul>
+      <div class="user-menu">
+        <div class="user-avatar">
+          <img src="/placeholder.svg?height=40&width=40" alt="User Avatar">
+          <span>Welcome, Traveler</span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="account-intro">
+      <h1>My Account</h1>
+      <p>Manage your profile and view your contributions</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Account Dashboard -->
+    <div class="account-dashboard">
+      <!-- Sidebar Navigation -->
+      <div class="account-sidebar">
+        <div class="user-profile-summary">
+          <div class="user-avatar-large">
+            <img src="/placeholder.svg?height=100&width=100" alt="User Avatar">
+          </div>
+          <h3>Traveler123</h3>
+          <p>Member since: Jan 2023</p>
+        </div>
+        
+        <ul class="account-nav">
+          <li class="active" data-tab="profile">
+            <i class="fas fa-user"></i> Profile Settings
+          </li>
+          <li data-tab="travel-notes">
+            <i class="fas fa-book"></i> My Travel Notes
+          </li>
+          <li data-tab="reports">
+            <i class="fas fa-flag"></i> My Reports
+          </li>
+        </ul>
+        
+        <div class="account-actions">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Log Out
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="account-content">
+        <!-- Profile Settings Tab -->
+        <div id="profile" class="account-tab active">
+          <h2 class="section-title"><i class="fas fa-user-edit"></i> Profile Settings</h2>
+          
+          <div class="settings-section">
+            <h3>Profile Picture</h3>
+            <div class="profile-picture-upload">
+              <div class="current-avatar">
+                <img src="/placeholder.svg?height=150&width=150" alt="Current Avatar">
+              </div>
+              <div class="upload-controls">
+                <button class="upload-btn">
+                  <i class="fas fa-upload"></i> Upload New Picture
+                </button>
+                <input type="file" id="avatar-upload" hidden>
+                <p class="upload-hint">Recommended size: 400x400 pixels (Max: 2MB)</p>
+                <button class="remove-btn">
+                  <i class="fas fa-trash"></i> Remove Picture
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="settings-section">
+            <h3>Personal Information</h3>
+            <form class="settings-form">
+              <div class="form-group">
+                <label for="display-name">Display Name</label>
+                <input type="text" id="display-name" value="Traveler123">
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" value="traveler@example.com">
+              </div>
+              
+              <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" rows="4" placeholder="Tell us about yourself and your travel interests...">Passionate traveler exploring the world one country at a time. Love to discover local infrastructure and share my experiences.</textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="City, Country" value="Tokyo, Japan">
+              </div>
+              
+              <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+          </div>
+          
+          <div class="settings-section">
+            <h3>Password</h3>
+            <form class="settings-form">
+              <div class="form-group">
+                <label for="current-password">Current Password</label>
+                <input type="password" id="current-password">
+              </div>
+              
+              <div class="form-group">
+                <label for="new-password">New Password</label>
+                <input type="password" id="new-password">
+              </div>
+              
+              <div class="form-group">
+                <label for="confirm-password">Confirm New Password</label>
+                <input type="password" id="confirm-password">
+              </div>
+              
+              <button type="submit" class="save-btn">Update Password</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Travel Notes Tab -->
+        <div id="travel-notes" class="account-tab">
+          <h2 class="section-title"><i class="fas fa-book"></i> My Travel Notes</h2>
+          
+          <div class="tab-actions">
+            <button class="action-btn">
+              <i class="fas fa-plus"></i> Create New Note
+            </button>
+            <div class="search-filter">
+              <input type="text" placeholder="Search my notes...">
+            </div>
+          </div>
+          
+          <div class="travel-notes-list">
+            <div class="travel-note-card">
+              <div class="note-image">
+                <img src="/placeholder.svg?height=200&width=300" alt="Japan Trip">
+              </div>
+              <div class="note-content">
+                <div class="note-header">
+                  <h3>My Journey Through Japan's Rail System</h3>
+                  <div class="note-meta">
+                    <span><i class="fas fa-calendar"></i> Published: May 15, 2023</span>
+                    <span><i class="fas fa-eye"></i> Views: 1,245</span>
+                  </div>
+                </div>
+                <p class="note-excerpt">Exploring Japan's efficient rail system was an incredible experience. From the punctual Shinkansen to the convenient metro lines in Tokyo...</p>
+                <div class="note-actions">
+                  <a href="#" class="btn-view">View</a>
+                  <a href="#" class="btn-edit">Edit</a>
+                  <a href="#" class="btn-delete">Delete</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="travel-note-card">
+              <div class="note-image">
+                <img src="/placeholder.svg?height=200&width=300" alt="Paris Trip">
+              </div>
+              <div class="note-content">
+                <div class="note-header">
+                  <h3>Navigating Paris: A Public Transport Guide</h3>
+                  <div class="note-meta">
+                    <span><i class="fas fa-calendar"></i> Published: March 3, 2023</span>
+                    <span><i class="fas fa-eye"></i> Views: 892</span>
+                  </div>
+                </div>
+                <p class="note-excerpt">The Paris Metro might seem complex at first, but it's actually one of the most efficient ways to get around the city. Here's my comprehensive guide...</p>
+                <div class="note-actions">
+                  <a href="#" class="btn-view">View</a>
+                  <a href="#" class="btn-edit">Edit</a>
+                  <a href="#" class="btn-delete">Delete</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="travel-note-card">
+              <div class="note-image">
+                <img src="/placeholder.svg?height=200&width=300" alt="New York Trip">
+              </div>
+              <div class="note-content">
+                <div class="note-header">
+                  <h3>Surviving New York City's Subway System</h3>
+                  <div class="note-meta">
+                    <span><i class="fas fa-calendar"></i> Published: January 20, 2023</span>
+                    <span><i class="fas fa-eye"></i> Views: 756</span>
+                  </div>
+                </div>
+                <p class="note-excerpt">New York's subway system is historic, extensive, and sometimes confusing. After spending a month in the city, I've compiled my best tips for navigating...</p>
+                <div class="note-actions">
+                  <a href="#" class="btn-view">View</a>
+                  <a href="#" class="btn-edit">Edit</a>
+                  <a href="#" class="btn-delete">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Reports Tab -->
+        <div id="reports" class="account-tab">
+          <h2 class="section-title"><i class="fas fa-flag"></i> My Reports</h2>
+          
+          <div class="tab-actions">
+            <button class="action-btn">
+              <i class="fas fa-plus"></i> Submit New Report
+            </button>
+            <div class="search-filter">
+              <select>
+                <option value="all">All Reports</option>
+                <option value="pending">Pending</option>
+                <option value="resolved">Resolved</option>
+                <option value="rejected">Rejected</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="reports-list">
+            <div class="report-card">
+              <div class="report-status pending">
+                <span>Pending</span>
+              </div>
+              <div class="report-content">
+                <div class="report-header">
+                  <h3>Incorrect Train Schedule Information - Tokyo</h3>
+                  <div class="report-meta">
+                    <span><i class="fas fa-calendar"></i> Submitted: June 5, 2023</span>
+                    <span><i class="fas fa-tag"></i> Category: Transportation</span>
+                  </div>
+                </div>
+                <p class="report-details">The Narita Express schedule listed in the Japan guide is outdated. The train now runs every 30 minutes instead of hourly during peak times.</p>
+                <div class="report-actions">
+                  <a href="viewcase.html" class="btn-view">View Details</a>
+                  <a href="#" class="btn-edit">Edit Report</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="report-card">
+              <div class="report-status resolved">
+                <span>Resolved</span>
+              </div>
+              <div class="report-content">
+                <div class="report-header">
+                  <h3>Updated Visa Information - Australia</h3>
+                  <div class="report-meta">
+                    <span><i class="fas fa-calendar"></i> Submitted: April 12, 2023</span>
+                    <span><i class="fas fa-tag"></i> Category: Pre-departure</span>
+                  </div>
+                </div>
+                <p class="report-details">Australia has updated its visa requirements for tourists. The ETA now costs AUD 20 instead of being free as mentioned in the guide.</p>
+                <div class="report-actions">
+                  <a href="#" class="btn-view">View Details</a>
+                  <a href="#" class="btn-feedback">Leave Feedback</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="report-card">
+              <div class="report-status rejected">
+                <span>Rejected</span>
+              </div>
+              <div class="report-content">
+                <div class="report-header">
+                  <h3>New Metro Line - Paris</h3>
+                  <div class="report-meta">
+                    <span><i class="fas fa-calendar"></i> Submitted: February 28, 2023</span>
+                    <span><i class="fas fa-tag"></i> Category: Transportation</span>
+                  </div>
+                </div>
+                <p class="report-details">Reported a new metro line in Paris, but the information was incorrect. The line is still under construction and not yet operational.</p>
+                <div class="report-actions">
+                  <a href="#" class="btn-view">View Details</a>
+                  <a href="#" class="btn-resubmit">Resubmit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <a href="https://space.bilibili.com/85318515"><i class="fa-brands fa-bilibili"></i></a>
+      <a href="https://github.com/Far-Land"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      <hr>
+      <p>© 2025 Far Land. All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    // Tab switching functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabLinks = document.querySelectorAll('.account-nav li');
+      const tabContents = document.querySelectorAll('.account-tab');
+      
+      tabLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          // Remove active class from all links and contents
+          tabLinks.forEach(item => item.classList.remove('active'));
+          tabContents.forEach(item => item.classList.remove('active'));
+          
+          // Add active class to clicked link
+          this.classList.add('active');
+          
+          // Show corresponding tab content
+          const tabId = this.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Profile picture upload functionality
+      const uploadBtn = document.querySelector('.upload-btn');
+      const fileInput = document.getElementById('avatar-upload');
+      
+      if (uploadBtn && fileInput) {
+        uploadBtn.addEventListener('click', function() {
+          fileInput.click();
+        });
+      }
+    });
+  </script>
+  <script src="js/auth.js"></script>
+  <script src="js/account.js"></script>
+</body>
+
+</html>
+
